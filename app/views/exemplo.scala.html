@@ -1,0 +1,13 @@
+@(pessoaForm : play.data.Form[Pessoa])
+@import helper._
+
+@main("Cadastrar Novo Aluno"){
+  <div class="form_wrapper-medium">
+    <h3 class="red-text">Cadastro do Celular</h3>
+    @form(routes.Application.cadastrar()){
+      @helper.inputText(pessoaForm("telefone"))
+      <input type="submit" value="cadastrar">
+    }
+  </div>
+}
+
